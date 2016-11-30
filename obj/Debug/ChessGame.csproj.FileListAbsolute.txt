@@ -1,0 +1,72 @@
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\Ajedrez\C#\bin\Debug\ChessGame.exe.config
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\Ajedrez\C#\bin\Debug\ChessGame.XML
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\Ajedrez\C#\bin\Debug\ChessGame.exe
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\Ajedrez\C#\bin\Debug\ChessGame.pdb
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\Ajedrez\C#\bin\Debug\ChessGame.exe.CodeAnalysisLog.xml
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\Ajedrez\C#\bin\Debug\ChessGame.exe.lastcodeanalysissucceeded
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\Ajedrez\C#\obj\Debug\ChessGame.csprojResolveAssemblyReference.cache
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\Ajedrez\C#\obj\Debug\ChessGame.ChessGameForm.resources
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\Ajedrez\C#\obj\Debug\ChessGame.Properties.Resources.resources
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\Ajedrez\C#\obj\Debug\ChessGame.csproj.GenerateResource.Cache
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\Ajedrez\C#\obj\Debug\ChessGame.exe
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\Ajedrez\C#\obj\Debug\ChessGame.pdb
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe.config
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\C#\bin\Debug\ChessGame.XML
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\C#\obj\Debug\ChessGame.exe
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\C#\obj\Debug\ChessGame.pdb
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\C#\bin\Debug\ChessGame.pdb
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe.CodeAnalysisLog.xml
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe.lastcodeanalysissucceeded
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\C#\obj\Debug\ChessGame.csprojResolveAssemblyReference.cache
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\C#\obj\Debug\ChessGame.ChessGameForm.resources
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\C#\obj\Debug\ChessGame.Properties.Resources.resources
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\C#\obj\Debug\ChessGame.csproj.GenerateResource.Cache
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\C#\obj\Debug\ChessGame.PantallaDeInicio.resources
+F:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe.config
+F:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.XML
+F:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.exe
+F:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.pdb
+F:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe
+F:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.pdb
+F:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe.CodeAnalysisLog.xml
+F:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe.lastcodeanalysissucceeded
+F:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.csprojResolveAssemblyReference.cache
+F:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.ChessGameForm.resources
+F:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.Properties.Resources.resources
+F:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.csproj.GenerateResource.Cache
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe.config
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.XML
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.exe
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.pdb
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.csprojResolveAssemblyReference.cache
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.ChessGameForm.resources
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.Properties.Resources.resources
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.csproj.GenerateResource.Cache
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.pdb
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe.CodeAnalysisLog.xml
+D:\Users\Charly\Documents\Visual Studio 2015\Projects\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe.lastcodeanalysissucceeded
+D:\Nueva carpeta\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe.config
+D:\Nueva carpeta\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.XML
+D:\Nueva carpeta\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.exe
+D:\Nueva carpeta\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.pdb
+D:\Nueva carpeta\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe
+D:\Nueva carpeta\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.pdb
+D:\Nueva carpeta\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe.CodeAnalysisLog.xml
+D:\Nueva carpeta\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe.lastcodeanalysissucceeded
+D:\Nueva carpeta\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.csprojResolveAssemblyReference.cache
+D:\Nueva carpeta\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.ChessGameForm.resources
+D:\Nueva carpeta\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.Properties.Resources.resources
+D:\Nueva carpeta\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.csproj.GenerateResource.Cache
+E:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe.config
+E:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.XML
+E:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.exe
+E:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.pdb
+E:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe
+E:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.pdb
+E:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe.CodeAnalysisLog.xml
+E:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\bin\Debug\ChessGame.exe.lastcodeanalysissucceeded
+E:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.ChessGameForm.resources
+E:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.Properties.Resources.resources
+E:\INSPT\Sistemas II\2do Parcial\AjedrezMultijugador\AjedrezMultijugador\C#\obj\Debug\ChessGame.csproj.GenerateResource.Cache

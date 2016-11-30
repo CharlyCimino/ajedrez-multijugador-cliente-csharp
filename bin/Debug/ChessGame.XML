@@ -1,0 +1,590 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChessGame</name>
+    </assembly>
+    <members>
+        <member name="M:ChessGame.Controls.ControladorDeRed.conectar">
+            <summary>
+            Conecta con el servidor de ajedrez
+            </summary>
+            <returns>Si se produjo la conexión</returns>
+        </member>
+        <member name="M:ChessGame.Controls.ControladorDeRed.enviarAlServidor(System.String)">
+            <summary>
+            Conecta con el servidor de ajedrez
+            </summary>
+            <returns>Si se produjo la conexión</returns>
+        </member>
+        <member name="T:ChessGame.Controls.SquareControl">
+            <summary>
+            Define un control para  las celdas del tablero de ajedrez
+            </summary>
+        </member>
+        <member name="M:ChessGame.Controls.SquareControl.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:ChessGame.Controls.SquareControl"/>
+            </summary>
+        </member>
+        <member name="F:ChessGame.Controls.SquareControl._boardSquare">
+            <summary>
+            Objeto Square del tablero asociado al control
+            </summary>
+        </member>
+        <member name="M:ChessGame.Controls.SquareControl.BoardSquare_PieceChanged(System.Object,System.EventArgs)">
+            <summary>
+            Actualiza la imagen del control cuando cambia la pieza de la celda
+            </summary>
+        </member>
+        <member name="M:ChessGame.Controls.SquareControl.OnParentChanged(System.EventArgs)">
+            <summary>
+            Recalcula el tamaño y la posición del control cuando cambia
+            el control padre
+            </summary>
+        </member>
+        <member name="M:ChessGame.Controls.SquareControl.Parent_Resize(System.Object,System.EventArgs)">
+            <summary>
+            Recalcula el tamaño y la posición del control cuando el control
+            padre cambia de tamaño
+            </summary>
+        </member>
+        <member name="M:ChessGame.Controls.SquareControl.SetSizeAndLocation">
+            <summary>
+            Establece el tamaño y la posición del control en función del tamaño
+            del control padre y de la fila y columna de la celda que representa
+            </summary>
+        </member>
+        <member name="M:ChessGame.Controls.SquareControl.SetBackColor">
+            <summary>
+            Establece el color de fondo de la celda
+            </summary>
+        </member>
+        <member name="M:ChessGame.Controls.SquareControl.SetImage">
+            <summary>
+            Establece la imagen a mostrar en función de la pieza posicionada en la celda
+            </summary>
+        </member>
+        <member name="T:ChessGame.Model.ColoresPosibles">
+            <summary>
+            Colores posibles que se pueden tomar
+            </summary>
+        </member>
+        <member name="T:ChessGame.Model.EstadoDelJuego">
+            <summary>
+            Posibles estados que puede tomar el juego
+            </summary>
+        </member>
+        <member name="T:ChessGame.Model.Movimiento">
+            <summary>
+            Estructura que define un movimiento
+            </summary>
+        </member>
+        <member name="F:ChessGame.Model.Movimiento.unidadesHaciaAdelante">
+            <summary>
+            Número de posiciones a avanzar hacia adelante
+            Si se mueve hacia atrás el valor será negativo
+            El movimiento se realizará hacia arriba o haciaa abajo en función
+            del color de la pieza a la que se aplica
+            </summary>
+        </member>
+        <member name="F:ChessGame.Model.Movimiento.unidadesHaciaDerecha">
+            <summary>
+            Número de posiciones a mover hacia la derecha
+            Si el movimiento es hacia la izquierda el valor será negativo
+            </summary>
+        </member>
+        <member name="T:ChessGame.Model.Juego">
+            <summary>
+            Representa el juego, manteniendo el estado en el que se encuentra
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.Juego.#ctor">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:ChessGame.Model.Juego"/>
+            </summary>
+        </member>
+        <member name="F:ChessGame.Model.Juego.ColorDelJugador">
+            <summary>
+            Color del jugador
+            </summary>
+        </member>
+        <member name="P:ChessGame.Model.Juego.Tablero">
+            <summary>
+            Tablero del juego
+            </summary>
+        </member>
+        <member name="F:ChessGame.Model.Juego._estado">
+            <summary>
+            Estado en el que se encuentra el juego
+            Cuando se asigna un nuevo estado se lanza el evento <see cref="E:ChessGame.Model.Juego.cambioDeEstado"/>
+            </summary>
+        </member>
+        <member name="P:ChessGame.Model.Juego.CeldaSeleccionada">
+            <summary>
+            Devuelve la celda seleccionada por el usuario
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.Juego.Iniciar(ChessGame.Model.ColoresPosibles)">
+            <summary>
+            Inicia un nuevo juego disponiendo las piezas del color indicado
+            en la parte superior del tablero
+            </summary>
+            <param name="jugadorArriba">Color de las piezas de la parte superior del tablero</param>
+        </member>
+        <member name="M:ChessGame.Model.Juego.DevolverCeldasQuePuedenSerSeleccionadas">
+            <summary>
+            Devuelve las celdas que pueden ser seleccionadas: las celdas con piezas del color del jugador
+            cuando el juego está pendiente de que éste inicie el movimiento
+            </summary>
+            <returns>Las celdas que pueden ser seleccionadas</returns>
+        </member>
+        <member name="M:ChessGame.Model.Juego.SeleccionarCelda(ChessGame.Model.Celda)">
+            <summary>
+            Selecciona la celda indicada como celda inicio del movimiento
+            </summary>
+            <param name="celdaASeleccionar">Celda a seleccionar</param>
+            <returns>true o false indicando si se ha realizado la selección
+            El juego debe estar pendiente de iniciar un movimiento y la celda ser una de
+            las celdas seleccionables</returns>
+        </member>
+        <member name="M:ChessGame.Model.Juego.DeseleccionarCelda">
+            <summary>
+            Deselecciona la celda actualmente seleccionada
+            </summary>
+            <returns>true o false indicando si se ha realizado la deselección
+            Para que exista celda seleccionada el juego debe estar pediente de finalizar movimiento</returns>
+        </member>
+        <member name="M:ChessGame.Model.Juego.CeldasDeDestinoPosibles">
+            <summary>
+            Devuelve las celdas que pueden ser destino del movimiento en función
+            de la celda actualmente seleccionada.
+            Los posibles destinos dependen de la pieza contenida en la celda seleccionada.
+            </summary>
+            <returns>Las celdas que pueden ser destino del movimiento</returns>
+        </member>
+        <member name="M:ChessGame.Model.Juego.realizarMovimiento(ChessGame.Model.Celda)">
+            <summary>
+            Ejecuta el movimiento desde la celda seleccionada a la 
+            celda indicada
+            </summary>
+            <param name="celdaDeDestino">Celda destino del movimiento</param>
+            <returns>true o false en función de si se ha podido realizar
+            el movimiento</returns>
+        </member>
+        <member name="M:ChessGame.Model.Juego.realizarMovimientoDelRival(System.String)">
+            <summary>
+            Ejecuta el movimiento desde la celda seleccionada a la 
+            celda indicada del rival
+            </summary>
+            <param name="movida">Celda origen y destino en formato String</param>
+        </member>
+        <member name="E:ChessGame.Model.Juego.cambioDeEstado">
+            <summary>
+            Se produce cuando cambia el estado del juego
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.Juego.OnCambioDeEstado(System.EventArgs)">
+            <summary>
+            Genera el evento StateChanged
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.Juego.chequearSiGano">
+            <summary>
+            Comprueba si el juego ha finalizado (si existe ganador)
+            </summary>
+            <returns>true o false indicando si el juego ha finalizado</returns>
+        </member>
+        <member name="T:ChessGame.Model.TableroDeAjedrez">
+            <summary>
+            Tablero de juego de ajedrez
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.TableroDeAjedrez.#ctor">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:ChessGame.Model.TableroDeAjedrez"/>
+            </summary>
+        </member>
+        <member name="P:ChessGame.Model.TableroDeAjedrez.JugadorArriba">
+            <summary>
+            Establece o devuelve el color del jugador cuyas piezas se posicionan
+            en la parte superior del tablero
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.TableroDeAjedrez.devolverCelda(System.Int32,System.Int32)">
+            <summary>
+            Devuelve la celda ubicada en la fila y columna especificadas
+            </summary>
+            <param name="fila">Fila</param>
+            <param name="columna">Columna</param>
+            <returns>Objeto Square de la fila y columna</returns>
+        </member>
+        <member name="M:ChessGame.Model.TableroDeAjedrez.GetSquare(ChessGame.Model.Celda,ChessGame.Model.Movimiento)">
+            <summary>
+            Devuelve la fila destino de la pieza después de aplicar un desplazamiento a partir de 
+            una celda origen
+            </summary>
+            <param name="celdaOrigen">Celda origen</param>
+            <param name="movimiento">Movimiento a realizar a partir de la celda origen</param>
+            <returns>Objeto Square destino del movimiento</returns>
+        </member>
+        <member name="M:ChessGame.Model.TableroDeAjedrez.colocarLasPiezas">
+            <summary>
+            Inicializa el tablero de juego colocando las piezas en su posición inicial
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.TableroDeAjedrez.ArrancarTablero(ChessGame.Model.ColoresPosibles)">
+            <summary>
+            Inicializa el tablero de juego colocando las piezas en su posición inicial
+            </summary>
+            <param name="colorDelJugadorSuperior">Color de las piezas a colocar en la parte
+            superior del tablero</param>
+        </member>
+        <member name="M:ChessGame.Model.TableroDeAjedrez.Mover(ChessGame.Model.Celda,ChessGame.Model.Celda)">
+            <summary>
+            Mueve una pieza de una celda a otra
+            </summary>
+            <param name="celdaDesde">Celda desde la que se realiza el movimiento</param>
+            <param name="celdaHacia">Celda destino del movimiento</param>
+            <returns>true o false indicando si el movimiento se ha realizado</returns>
+        </member>
+        <member name="M:ChessGame.Model.TableroDeAjedrez.limpiarTablero">
+            <summary>
+            Elimina todas las piezas del tablero
+            </summary>
+        </member>
+        <member name="T:ChessGame.Model.Celda">
+            <summary>
+            Celda del tablero de ajedrez
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.Celda.#ctor(ChessGame.Model.TableroDeAjedrez,System.Int32,System.Int32)">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:ChessGame.Model.Celda"/>
+            </summary>
+            <param name="tablero">Referencia al tablero al que pertenece la celda</param>
+            <param name="fila">Fila (índice basado en 0)</param>
+            <param name="columna">Columna (índice basado en 0)</param>
+        </member>
+        <member name="P:ChessGame.Model.Celda.Tablero">
+            <summary>
+            Tablero al que pertenece la celda
+            </summary>
+        </member>
+        <member name="P:ChessGame.Model.Celda.Fila">
+            <summary>
+            Fila (índice basado en 0)
+            </summary>
+        </member>
+        <member name="P:ChessGame.Model.Celda.Columna">
+            <summary>
+            Columna (índice basado en 0)
+            </summary>
+        </member>
+        <member name="F:ChessGame.Model.Celda._pieza">
+            <summary>
+            Devuelve o establece la pieza que se encuentra en la celda
+            </summary>
+        </member>
+        <member name="E:ChessGame.Model.Celda.piezaCambiada">
+            <summary>
+            Se produce cuando cambia la pieza de la celda
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.Celda.OnPiezaCambiada(System.EventArgs)">
+            <summary>
+            Genera el evento PieceChanged
+            </summary>
+        </member>
+        <member name="T:ChessGame.Model.Pieza">
+            <summary>
+            Clase base para definir las diferentes piezas de ajedrez
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.Pieza.#ctor(ChessGame.Model.ColoresPosibles)">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:ChessGame.Model.Pieza"/>
+            </summary>
+            <param name="color">Color de la pieza</param>
+        </member>
+        <member name="P:ChessGame.Model.Pieza.Color">
+            <summary>
+            Color de la pieza
+            </summary>
+        </member>
+        <member name="P:ChessGame.Model.Pieza.CeldaActual">
+            <summary>
+            Celda en la que se encuentra la pieza
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.Pieza.ListaDeDestinosPosibles">
+            <summary>
+            Devuelve las celdas a las que puede moverse la pieza
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ChessGame.Model.Pieza.EsUnDestinoPosible(ChessGame.Model.Celda)">
+            <summary>
+            Comprueba si una celda puede ser destino de un movimiento de la pieza:
+            si está vacía o contiene una pieza de un color diferente
+            </summary>
+            <param name="celdaCandidata">Celda a comprobar</param>
+            <returns>true o false indicando si puede ser destino del movimiento</returns>
+        </member>
+        <member name="M:ChessGame.Model.Pieza.DestinosPosibles(System.Int32,System.Int32)">
+            <summary>
+            Devuelve la lista de los posibles destinos de movimiento de la pieza
+            en una dirección determinada
+            La dirección a tomar viene dada por un incremento hacia adelante y
+            otro horizontal
+            </summary>
+            <param name="incrementoHaciaAdelante">Incremento hacia adelante.
+            Si la dirección es hacia atrás será un valor negativo.</param>
+            <param name="incrementoHaciaDerecha">Incremento hacia la derecha.
+            Si la dirección es hacia la izquierda será un valor negativo.</param>
+            <returns>Lista de celdas posibles destinos de movimiento</returns>
+        </member>
+        <member name="M:ChessGame.Model.Pieza.CeldasPosiblesParaMovimientosDados(System.Collections.Generic.IEnumerable{ChessGame.Model.Movimiento})">
+            <summary>
+            Devuelve la lista de los posibles destinos de movimiento de la pieza
+            a partir de una lista de movimientos
+            </summary>
+            <param name="moves">Lista de movimientos que puede realizar la pieza</param>
+            <returns>Lista de celdas posibles destinos</returns>
+        </member>
+        <member name="T:ChessGame.Model.Rey">
+            <summary>
+            Rey
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.Rey.#ctor(ChessGame.Model.ColoresPosibles)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:ChessGame.Model.Rey"/>
+            </summary>
+            <param name="color">Color de la pieza</param>
+        </member>
+        <member name="F:ChessGame.Model.Rey.movimientos">
+            <summary>
+            Movimientos que puede realizar el rey
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.Rey.ListaDeDestinosPosibles">
+            <summary>
+            Devuelve las celdas a las que puede moverse la pieza
+            </summary>
+            <returns>Lista de celdas</returns>
+        </member>
+        <member name="T:ChessGame.Model.Torre">
+            <summary>
+            Torre
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.Torre.#ctor(ChessGame.Model.ColoresPosibles)">
+            <summary>
+            Inicializa una nueva clase de <see cref="T:ChessGame.Model.Torre"/>
+            </summary>
+            <param name="color">Color de la Pieza</param>
+        </member>
+        <member name="M:ChessGame.Model.Torre.ListaDeDestinosPosibles">
+            <summary>
+            Devuelve las celdas a las que puede moverse la pieza
+            </summary>
+            <returns>Lista de celdas</returns>
+        </member>
+        <member name="T:ChessGame.Model.Alfil">
+            <summary>
+            Alfil
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.Alfil.#ctor(ChessGame.Model.ColoresPosibles)">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:ChessGame.Model.Alfil"/>
+            </summary>
+            <param name="color">Color de la pieza</param>
+        </member>
+        <member name="M:ChessGame.Model.Alfil.ListaDeDestinosPosibles">
+            <summary>
+            Devuelve las celdas a las que puede moverse la pieza
+            </summary>
+            <returns>Lista de celdas</returns>
+        </member>
+        <member name="T:ChessGame.Model.Reina">
+            <summary>
+            Reina
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.Reina.#ctor(ChessGame.Model.ColoresPosibles)">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:ChessGame.Model.Reina"/>
+            </summary>
+            <param name="color">Color de la pieza</param>
+        </member>
+        <member name="M:ChessGame.Model.Reina.ListaDeDestinosPosibles">
+            <summary>
+            Devuelve las celdas a las que puede moverse la pieza
+            </summary>
+            <returns>Lista de celdas</returns>
+        </member>
+        <member name="T:ChessGame.Model.Caballo">
+            <summary>
+            Caballo
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.Caballo.#ctor(ChessGame.Model.ColoresPosibles)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:ChessGame.Model.Caballo"/>
+            </summary>
+            <param name="color">Color de la pieza</param>
+        </member>
+        <member name="F:ChessGame.Model.Caballo.movimientos">
+            <summary>
+            Movimmientos que puede realizar el caballo
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.Caballo.ListaDeDestinosPosibles">
+            <summary>
+            Devuelve las celdas a las que puede moverse la pieza
+            </summary>
+            <returns>Lista de celdas</returns>
+        </member>
+        <member name="T:ChessGame.Model.Peon">
+            <summary>
+            Peón
+            </summary>
+        </member>
+        <member name="M:ChessGame.Model.Peon.#ctor(ChessGame.Model.ColoresPosibles)">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:ChessGame.Model.Peon"/>
+            </summary>
+            <param name="color">Color de la pieza</param>
+        </member>
+        <member name="M:ChessGame.Model.Peon.ListaDeDestinosPosibles">
+            <summary>
+            Devuelve las celdas a las que puede moverse la pieza
+            </summary>
+            <returns>Lista de celdas</returns>
+        </member>
+        <member name="T:ChessGame.ChessGameForm">
+            <summary>
+            Formulario con el tablero de juego
+            </summary>
+        </member>
+        <member name="M:ChessGame.ChessGameForm.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:ChessGame.ChessGameForm"/>
+            </summary>
+        </member>
+        <member name="M:ChessGame.ChessGameForm.Square_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Método que controla la pulsación de una celda por parte del usuario
+            </summary>
+        </member>
+        <member name="M:ChessGame.ChessGameForm.Game_StateChanged(System.Object,System.EventArgs)">
+            <summary>
+            Controlador para el evento de cambio de estado del juego
+            </summary>
+        </member>
+        <member name="F:ChessGame.ChessGameForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ChessGame.ChessGameForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ChessGame.ChessGameForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ChessGame.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:ChessGame.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ChessGame.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ChessGame.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ChessGame.Properties.Resources.alfil_blanco">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ChessGame.Properties.Resources.alfil_negro">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ChessGame.Properties.Resources.caballo_blanco">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ChessGame.Properties.Resources.caballo_negro">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ChessGame.Properties.Resources.DibujoCaemci">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ChessGame.Properties.Resources.peon_blanco">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ChessGame.Properties.Resources.peon_negro">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ChessGame.Properties.Resources.reina_blanco">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ChessGame.Properties.Resources.reina_negro">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ChessGame.Properties.Resources.rey_blanco">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ChessGame.Properties.Resources.rey_negro">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ChessGame.Properties.Resources.torre_blanco">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ChessGame.Properties.Resources.torre_negro">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>
